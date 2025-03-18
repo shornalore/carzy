@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cars - Carzy</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="search.html" class="active">Cars</a></li>
+                    <li><a href="compare.html">Compare</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Find Your Perfect Car</h1>
+                <p>Browse through our extensive collection of cars with detailed specifications</p>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-sidebar">
+                    <div class="search-filters">
+                        <h3>Filters</h3>
+                        
+                        <div class="filter-group">
+                            <h4>Brand</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="brand-maruti" value="maruti">
+                                    <label for="brand-maruti">Maruti Suzuki</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="brand-hyundai" value="hyundai">
+                                    <label for="brand-hyundai">Hyundai</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="brand-tata" value="tata">
+                                    <label for="brand-tata">Tata Motors</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="brand-honda" value="honda">
+                                    <label for="brand-honda">Honda</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="brand-toyota" value="toyota">
+                                    <label for="brand-toyota">Toyota</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="brand-mahindra" value="mahindra">
+                                    <label for="brand-mahindra">Mahindra</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Body Type</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="type-hatchback" value="hatchback">
+                                    <label for="type-hatchback">Hatchback</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="type-sedan" value="sedan">
+                                    <label for="type-sedan">Sedan</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="type-suv" value="suv">
+                                    <label for="type-suv">SUV</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="type-muv" value="muv">
+                                    <label for="type-muv">MUV</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="type-luxury" value="luxury">
+                                    <label for="type-luxury">Luxury</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Fuel Type</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="fuel-petrol" value="petrol">
+                                    <label for="fuel-petrol">Petrol</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="fuel-diesel" value="diesel">
+                                    <label for="fuel-diesel">Diesel</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="fuel-cng" value="cng">
+                                    <label for="fuel-cng">CNG</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="fuel-electric" value="electric">
+                                    <label for="fuel-electric">Electric</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="fuel-hybrid" value="hybrid">
+                                    <label for="fuel-hybrid">Hybrid</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="price-range">
+                                <input type="number" class="price-input" id="price-min" placeholder="Min (₹ Lakh)">
+                                <span>to</span>
+                                <input type="number" class="price-input" id="price-max" placeholder="Max (₹ Lakh)">
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Transmission</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="transmission-manual" value="manual">
+                                    <label for="transmission-manual">Manual</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="transmission-automatic" value="automatic">
+                                    <label for="transmission-automatic">Automatic</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Seating Capacity</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="seats-5" value="5">
+                                    <label for="seats-5">5 Seater</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="seats-6" value="6">
+                                    <label for="seats-6">6 Seater</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="seats-7" value="7">
+                                    <label for="seats-7">7 Seater</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="seats-8" value="8+">
+                                    <label for="seats-8">8+ Seater</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn reset-filters-btn">
+                            <i class="fas fa-redo"></i> Reset Filters
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="search-results">
+                    <div class="search-results-header">
+                        <div class="results-count">
+                            Showing <span id="results-count">24</span> cars
+                        </div>
+                        <div class="sort-options">
+                            <span class="sort-label">Sort by:</span>
+                            <select class="sort-select" id="sort-select">
+                                <option value="popularity">Popularity</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="mileage">Mileage</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="cars-container" id="search-results">
+                        <!-- Car cards will be dynamically added here -->
+                        
+                        <div class="car-card">
+                            <div class="car-image">
+                                <img src="../assets/images/cars/maruti-swift.jpg" alt="Maruti Suzuki Swift">
+                            </div>
+                            <div class="car-details">
+                                <h3>Maruti Suzuki Swift</h3>
+                                <div class="car-price">₹6.00 - ₹9.10 Lakh</div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                    <span><i class="fas fa-tachometer-alt"></i> 23.2 kmpl</span>
+                                    <span><i class="fas fa-cogs"></i> Manual/AMT</span>
+                                </div>
+                                <div class="car-action">
+                                    <a href="car-details.html?id=maruti-swift" class="view-details">View Details</a>
+                                    <i class="fas fa-balance-scale compare-icon" data-car="maruti-swift"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <div class="car-image">
+                                <img src="../assets/images/cars/hyundai-i20.jpg" alt="Hyundai i20">
+                            </div>
+                            <div class="car-details">
+                                <h3>Hyundai i20</h3>
+                                <div class="car-price">₹7.19 - ₹11.83 Lakh</div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-gas-pump"></i> Petrol/Diesel</span>
+                                    <span><i class="fas fa-tachometer-alt"></i> 20.35 kmpl</span>
+                                    <span><i class="fas fa-cogs"></i> Manual/IVT</span>
+                                </div>
+                                <div class="car-action">
+                                    <a href="car-details.html?id=hyundai-i20" class="view-details">View Details</a>
+                                    <i class="fas fa-balance-scale compare-icon" data-car="hyundai-i20"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <div class="car-image">
+                                <img src="../assets/images/cars/tata-nexon.jpg" alt="Tata Nexon">
+                            </div>
+                            <div class="car-details">
+                                <h3>Tata Nexon</h3>
+                                <div class="car-price">₹8.10 - ₹14.60 Lakh</div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-gas-pump"></i> Petrol/Diesel</span>
+                                    <span><i class="fas fa-tachometer-alt"></i> 17.4 kmpl</span>
+                                    <span><i class="fas fa-cogs"></i> Manual/AMT</span>
+                                </div>
+                                <div class="car-action">
+                                    <a href="car-details.html?id=tata-nexon" class="view-details">View Details</a>
+                                    <i class="fas fa-balance-scale compare-icon" data-car="tata-nexon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <div class="car-image">
+                                <img src="../assets/images/cars/honda-city.jpg" alt="Honda City">
+                            </div>
+                            <div class="car-details">
+                                <h3>Honda City</h3>
+                                <div class="car-price">₹11.57 - ₹15.97 Lakh</div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                    <span><i class="fas fa-tachometer-alt"></i> 18.4 kmpl</span>
+                                    <span><i class="fas fa-cogs"></i> Manual/CVT</span>
+                                </div>
+                                <div class="car-action">
+                                    <a href="car-details.html?id=honda-city" class="view-details">View Details</a>
+                                    <i class="fas fa-balance-scale compare-icon" data-car="honda-city"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <div class="car-image">
+                                <img src="../assets/images/cars/mahindra-thar.jpg" alt="Mahindra Thar">
+                            </div>
+                            <div class="car-details">
+                                <h3>Mahindra Thar</h3>
+                                <div class="car-price">₹13.59 - ₹16.29 Lakh</div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-gas-pump"></i> Petrol/Diesel</span>
+                                    <span><i class="fas fa-tachometer-alt"></i> 15.2 kmpl</span>
+                                    <span><i class="fas fa-cogs"></i> Manual/AT</span>
+                                </div>
+                                <div class="car-action">
+                                    <a href="car-details.html?id=mahindra-thar" class="view-details">View Details</a>
+                                    <i class="fas fa-balance-scale compare-icon" data-car="mahindra-thar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <div class="car-image">
+                                <img src="../assets/images/cars/toyota-innova.jpg" alt="Toyota Innova Crysta">
+                            </div>
+                            <div class="car-details">
+                                <h3>Toyota Innova Crysta</h3>
+                                <div class="car-price">₹19.13 - ₹25.43 Lakh</div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                    <span><i class="fas fa-tachometer-alt"></i> 13.9 kmpl</span>
+                                    <span><i class="fas fa-cogs"></i> Manual/AT</span>
+                                </div>
+                                <div class="car-action">
+                                    <a href="car-details.html?id=toyota-innova" class="view-details">View Details</a>
+                                    <i class="fas fa-balance-scale compare-icon" data-car="toyota-innova"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="page-btn prev">
+                            <i class="fas fa-chevron-left"></i> Prev
+                        </button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">4</button>
+                        <button class="page-btn next">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                    <p>Your ultimate car information platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="search.html">Cars</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@carzy.com</p>
+                    <p>Phone: +91 1234567890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Carzy. All rights reserved.</p>
+                <p>Developed by Akshat Jain, Krishanu Barman, Aditya Nath</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/animations.js"></script>
+</body>

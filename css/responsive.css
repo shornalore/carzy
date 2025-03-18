@@ -1,0 +1,265 @@
+/* Responsive Styles */
+
+/* Large Screens (Desktops) */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .car-details-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Screens (Mobile Landscape) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        z-index: 1000;
+        transition: var(--transition);
+        padding: 80px 20px 20px;
+    }
+    
+    .nav.active {
+        left: 0;
+    }
+    
+    .nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .search-bar input {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .search-btn {
+        border-radius: 8px;
+        width: 100%;
+    }
+    
+    .brands-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .cars-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .price-rating {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .rating {
+        align-items: flex-start;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .tabs-header {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+    
+    .tab-btn {
+        padding: 15px 20px;
+    }
+    
+    .compare-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .compare-table {
+        overflow-x: auto;
+    }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .quick-filters {
+        flex-wrap: wrap;
+    }
+    
+    .brands-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cars-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    section h2 {
+        font-size: 24px;
+    }
+    
+    .car-info h1 {
+        font-size: 24px;
+    }
+    
+    #car-price {
+        font-size: 20px;
+    }
+    
+    .main-image {
+        height: 250px;
+    }
+    
+    .review-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .reviewer-info {
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .price-range {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-results-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .nav {
+        padding-top: 60px;
+    }
+    
+    .main-image {
+        height: 200px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header, .footer, .action-buttons, .search-bar, .menu-toggle, .search-icon {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .car-details-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .car-details-tabs {
+        page-break-inside: avoid;
+    }
+    
+    .tab-pane {
+        display: block;
+    }
+    
+    .tabs-header {
+        display: none;
+    }
+}

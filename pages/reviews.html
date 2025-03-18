@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Reviews - Carzy</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="search.html">Cars</a></li>
+                    <li><a href="compare.html">Compare</a></li>
+                    <li><a href="reviews.html" class="active">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Car Reviews</h1>
+                <p>Read honest reviews from car owners and experts</p>
+            </div>
+            
+            <div class="write-review">
+                <h3>Share Your Experience</h3>
+                <form class="review-form" id="review-form">
+                    <div class="form-group">
+                        <label for="car-select">Select Car</label>
+                        <select class="form-control" id="car-select" required>
+                            <option value="">Select a car</option>
+                            <option value="maruti-swift">Maruti Suzuki Swift</option>
+                            <option value="hyundai-i20">Hyundai i20</option>
+                            <option value="tata-nexon">Tata Nexon</option>
+                            <option value="honda-city">Honda City</option>
+                            <option value="toyota-innova">Toyota Innova Crysta</option>
+                            <option value="mahindra-thar">Mahindra Thar</option>
+                            <option value="kia-seltos">Kia Seltos</option>
+                            <option value="mg-hector">MG Hector</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reviewer-name">Your Name</label>
+                        <input type="text" class="form-control" id="reviewer-name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-title">Review Title</label>
+                        <input type="text" class="form-control" id="review-title" placeholder="Enter a title for your review" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="rating-select" id="rating-select">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-content">Your Review</label>
+                        <textarea class="form-control" id="review-content" rows="5" placeholder="Share your experience with this car" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-review">Submit Review</button>
+                </form>
+            </div>
+            
+            <div class="reviews-filter">
+                <div class="filter-options">
+                    <select id="brand-filter" class="form-control">
+                        <option value="">All Brands</option>
+                        <option value="maruti">Maruti Suzuki</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="tata">Tata Motors</option>
+                        <option value="honda">Honda</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="mahindra">Mahindra</option>
+                        <option value="kia">Kia</option>
+                        <option value="mg">MG</option>
+                    </select>
+                    
+                    <select id="rating-filter" class="form-control">
+                        <option value="">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars & Above</option>
+                        <option value="3">3 Stars & Above</option>
+                        <option value="2">2 Stars & Above</option>
+                        <option value="1">1 Star & Above</option>
+                    </select>
+                    
+                    <select id="sort-filter" class="form-control">
+                        <option value="latest">Latest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="highest">Highest Rating</option>
+                        <option value="lowest">Lowest Rating</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="reviews-container" id="reviews-container">
+                <!-- Review cards will be dynamically added here -->
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="../assets/images/avatars/user1.jpg" alt="User Avatar">
+                            </div>
+                            <div>
+                                <h4 class="reviewer-name">Rahul Sharma</h4>
+                                <span class="review-date">March 15, 2025</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="review-title">Excellent family car with great mileage</h3>
+                    
+                    <div class="review-content">
+                        <p>I've been driving the Maruti Suzuki Swift for over 6 months now and I'm extremely satisfied with its performance. The mileage is excellent, getting around 22 kmpl on highways. The cabin space is comfortable for a family of four. Maintenance cost is also very reasonable. The only downside is the boot space which could have been better.</p>
+                    </div>
+                    
+                    <div class="review-car">
+                        <div class="review-car-img">
+                            <img src="../assets/images/cars/maruti-swift.jpg" alt="Maruti Suzuki Swift">
+                        </div>
+                        <span class="review-car-name">Maruti Suzuki Swift</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="../assets/images/avatars/user2.jpg" alt="User Avatar">
+                            </div>
+                            <div>
+                                <h4 class="reviewer-name">Priya Patel</h4>
+                                <span class="review-date">March 10, 2025</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="review-title">Best SUV in this price range</h3>
+                    
+                    <div class="review-content">
+                        <p>The Tata Nexon is a game-changer in the compact SUV segment. The 5-star safety rating gives great peace of mind. The ride quality is exceptional, handling both city traffic and highway drives with ease. The infotainment system is intuitive and the sound system is top-notch. Highly recommend for anyone looking for a safe, feature-packed SUV.</p>
+                    </div>
+                    
+                    <div class="review-car">
+                        <div class="review-car-img">
+                            <img src="../assets/images/cars/tata-nexon.jpg" alt="Tata Nexon">
+                        </div>
+                        <span class="review-car-name">Tata Nexon</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="../assets/images/avatars/user3.jpg" alt="User Avatar">
+                            </div>
+                            <div>
+                                <h4 class="reviewer-name">Amit Kumar</h4>
+                                <span class="review-date">March 5, 2025</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="review-title">Good car but needs improvement</h3>
+                    
+                    <div class="review-content">
+                        <p>The Hyundai i20 has a premium feel with good build quality and features. The touchscreen infotainment system with Android Auto and Apple CarPlay works flawlessly. However, the mileage is disappointing in city conditions, and the rear seat comfort could be better for long journeys. Service costs are also on the higher side compared to competitors.</p>
+                    </div>
+                    
+                    <div class="review-car">
+                        <div class="review-car-img">
+                            <img src="../assets/images/cars/hyundai-i20.jpg" alt="Hyundai i20">
+                        </div>
+                        <span class="review-car-name">Hyundai i20</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="page-btn prev">
+                    <i class="fas fa-chevron-left"></i> Prev
+                </button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                    <p>Your ultimate car information platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="search.html">Cars</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@carzy.com</p>
+                    <p>Phone: +91 1234567890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Carzy. All rights reserved.</p>
+                <p>Developed by Akshat Jain, Krishanu Barman, Aditya Nath</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/reviews.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>
