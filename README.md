@@ -34,7 +34,7 @@ Carzy is a web-based application designed to provide users with comprehensive in
 **Backend**
 - Node.js
 - Express framework
-- MongoDB for database management
+- Postgresql for database management
 
 **APIs and Services**
 - RESTful API for car data
