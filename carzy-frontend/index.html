@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carzy - Your Ultimate Car Information Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Carzy Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/search.html">Cars</a></li>
+                    <li><a href="pages/compare.html">Compare</a></li>
+                    <li><a href="pages/reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <a href="pages/login.html" class="login-btn">Login</a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Car</h1>
+                <p>Comprehensive information on specifications, pricing, and availability</p>
+                <div class="search-bar">
+                    <input type="text" id="home-search" placeholder="Search by brand, model, or type">
+                    <button class="search-btn" id="home-search-btn">Search</button>
+                </div>                               
+                <div class="quick-filters">
+                    <button class="filter-btn" data-filter="sedan">Sedan</button>
+                    <button class="filter-btn" data-filter="suv">SUV</button>
+                    <button class="filter-btn" data-filter="hatchback">Hatchback</button>
+                    <button class="filter-btn" data-filter="luxury">Luxury</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-brands">
+        <div class="container">
+            <h2>Popular Brands</h2>
+            <div class="brands-container">
+                <div class="brand-card" data-brand="maruti">
+                    <img src="assets/images/brands/maruti.png" alt="Maruti Suzuki">
+                    <h3>Maruti Suzuki</h3>
+                </div>
+                <div class="brand-card" data-brand="hyundai">
+                    <img src="assets/images/brands/hyundai.png" alt="Hyundai">
+                    <h3>Hyundai</h3>
+                </div>
+                <div class="brand-card" data-brand="tata">
+                    <img src="assets/images/brands/tata.png" alt="Tata Motors">
+                    <h3>Tata Motors</h3>
+                </div>
+                <div class="brand-card" data-brand="honda">
+                    <img src="assets/images/brands/honda.png" alt="Honda">
+                    <h3>Honda</h3>
+                </div>
+                <div class="brand-card" data-brand="toyota">
+                    <img src="assets/images/brands/toyota.png" alt="Toyota">
+                    <h3>Toyota</h3>
+                </div>
+                <div class="brand-card" data-brand="mahindra">
+                    <img src="assets/images/brands/mahindra.png" alt="Mahindra">
+                    <h3>Mahindra</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-cars">
+        <div class="container">
+            <h2>Featured Cars</h2>
+            <div class="cars-container">
+                <!-- Cars will be dynamically added here using JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Carzy</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Comprehensive Listings</h3>
+                    <p>Detailed specifications and features of various car models</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tags"></i>
+                    <h3>Real-time Pricing</h3>
+                    <p>Up-to-date pricing information for all models</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-filter"></i>
+                    <h3>Advanced Filters</h3>
+                    <p>Find your perfect car with our detailed search options</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Comparison Tool</h3>
+                    <p>Compare multiple cars side by side</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Carzy Logo">
+                    <p>Your ultimate car information platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/search.html">Cars</a></li>
+                        <li><a href="pages/compare.html">Compare</a></li>
+                        <li><a href="pages/reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@carzy.com</p>
+                    <p>Phone: +91 1234567890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Carzy. All rights reserved.</p>
+                <p>Developed by Akshat Jain, Krishanu Barman, Aditya Nath</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        document.getElementById('home-search-btn').addEventListener('click', function () {
+            const searchQuery = document.getElementById('home-search').value.trim();
+            if (searchQuery) {
+                window.location.href = `pages/search.html?query=${encodeURIComponent(searchQuery)}`;
+            }
+        });
+    
+        document.getElementById('home-search').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('home-search-btn').click();
+            }
+        });
+    </script>    
+    
+</body>
+</html>
