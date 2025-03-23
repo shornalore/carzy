@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Cars - Carzy</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="search.html">Cars</a></li>
+                    <li><a href="compare.html" class="active">Compare</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="compare-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Compare Cars</h1>
+                <p>Compare specifications, features, and prices of different car models side by side</p>
+            </div>
+            
+            <div class="compare-container">
+                <div class="compare-car compare-car-empty" id="compare-car-1">
+                    <i class="fas fa-plus"></i>
+                    <p>Select Car 1</p>
+                </div>
+                
+                <div class="compare-car compare-car-empty" id="compare-car-2">
+                    <i class="fas fa-plus"></i>
+                    <p>Select Car 2</p>
+                </div>
+                
+                <div class="compare-car compare-car-empty" id="compare-car-3">
+                    <i class="fas fa-plus"></i>
+                    <p>Select Car 3</p>
+                </div>
+            </div>
+            
+            <div class="compare-actions" style="display: none;">
+                <button class="btn compare-btn" id="compare-btn">
+                    <i class="fas fa-balance-scale"></i> Compare Now
+                </button>
+                <button class="btn reset-btn" id="reset-btn">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+            </div>
+            
+            <div class="compare-results" style="display: none;">
+                <h2>Comparison Results</h2>
+                
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Specifications</th>
+                            <th id="car1-name">Car 1</th>
+                            <th id="car2-name">Car 2</th>
+                            <th id="car3-name">Car 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Brand</td>
+                            <td id="car1-brand">-</td>
+                            <td id="car2-brand">-</td>
+                            <td id="car3-brand">-</td>
+                        </tr>
+                        <tr>
+                            <td>Price Range</td>
+                            <td id="car1-price">-</td>
+                            <td id="car2-price">-</td>
+                            <td id="car3-price">-</td>
+                        </tr>
+                        <tr>
+                            <td>Engine</td>
+                            <td id="car1-engine">-</td>
+                            <td id="car2-engine">-</td>
+                            <td id="car3-engine">-</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Type</td>
+                            <td id="car1-fuel">-</td>
+                            <td id="car2-fuel">-</td>
+                            <td id="car3-fuel">-</td>
+                        </tr>
+                        <tr>
+                            <td>Transmission</td>
+                            <td id="car1-transmission">-</td>
+                            <td id="car2-transmission">-</td>
+                            <td id="car3-transmission">-</td>
+                        </tr>
+                        <tr>
+                            <td>Mileage</td>
+                            <td id="car1-mileage">-</td>
+                            <td id="car2-mileage">-</td>
+                            <td id="car3-mileage">-</td>
+                        </tr>
+                        <tr>
+                            <td>Seating Capacity</td>
+                            <td id="car1-seating">-</td>
+                            <td id="car2-seating">-</td>
+                            <td id="car3-seating">-</td>
+                        </tr>
+                        <tr>
+                            <td>Body Type</td>
+                            <td id="car1-body">-</td>
+                            <td id="car2-body">-</td>
+                            <td id="car3-body">-</td>
+                        </tr>
+                        <tr>
+                            <td>Safety Rating</td>
+                            <td id="car1-safety">-</td>
+                            <td id="car2-safety">-</td>
+                            <td id="car3-safety">-</td>
+                        </tr>
+                        <tr>
+                            <td>Boot Space</td>
+                            <td id="car1-boot">-</td>
+                            <td id="car2-boot">-</td>
+                            <td id="car3-boot">-</td>
+                        </tr>
+                        <tr>
+                            <td>Ground Clearance</td>
+                            <td id="car1-ground">-</td>
+                            <td id="car2-ground">-</td>
+                            <td id="car3-ground">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="features-comparison">
+                    <h3>Features Comparison</h3>
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Features</th>
+                                <th id="car1-name-features">Car 1</th>
+                                <th id="car2-name-features">Car 2</th>
+                                <th id="car3-name-features">Car 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Air Conditioning</td>
+                                <td id="car1-ac">-</td>
+                                <td id="car2-ac">-</td>
+                                <td id="car3-ac">-</td>
+                            </tr>
+                            <tr>
+                                <td>Power Steering</td>
+                                <td id="car1-power-steering">-</td>
+                                <td id="car2-power-steering">-</td>
+                                <td id="car3-power-steering">-</td>
+                            </tr>
+                            <tr>
+                                <td>Power Windows</td>
+                                <td id="car1-power-windows">-</td>
+                                <td id="car2-power-windows">-</td>
+                                <td id="car3-power-windows">-</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                                <td id="car1-abs">-</td>
+                                <td id="car2-abs">-</td>
+                                <td id="car3-abs">-</td>
+                            </tr>
+                            <tr>
+                                <td>Airbags</td>
+                                <td id="car1-airbags">-</td>
+                                <td id="car2-airbags">-</td>
+                                <td id="car3-airbags">-</td>
+                            </tr>
+                            <tr>
+                                <td>Infotainment System</td>
+                                <td id="car1-infotainment">-</td>
+                                <td id="car2-infotainment">-</td>
+                                <td id="car3-infotainment">-</td>
+                            </tr>
+                            <tr>
+                                <td>Parking Sensors</td>
+                                <td id="car1-parking">-</td>
+                                <td id="car2-parking">-</td>
+                                <td id="car3-parking">-</td>
+                            </tr>
+                            <tr>
+                                <td>Sunroof</td>
+                                <td id="car1-sunroof">-</td>
+                                <td id="car2-sunroof">-</td>
+                                <td id="car3-sunroof">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="popular-comparisons">
+                <h2>Popular Comparisons</h2>
+                <div class="comparison-cards">
+                    <div class="comparison-card">
+                        <div class="comparison-cars">
+                            <div class="comparison-car">
+                                <img src="../assets/images/cars/maruti-swift.jpg" alt="Maruti Swift">
+                                <h4>Maruti Swift</h4>
+                            </div>
+                            <span class="vs">VS</span>
+                            <div class="comparison-car">
+                                <img src="../assets/images/cars/hyundai-i20.jpg" alt="Hyundai i20">
+                                <h4>Hyundai i20</h4>
+                            </div>
+                        </div>
+                        <button class="btn compare-now-btn">Compare Now</button>
+                    </div>
+                    
+                    <div class="comparison-card">
+                        <div class="comparison-cars">
+                            <div class="comparison-car">
+                                <img src="../assets/images/cars/honda-city.jpg" alt="Honda City">
+                                <h4>Honda City</h4>
+                            </div>
+                            <span class="vs">VS</span>
+                            <div class="comparison-car">
+                                <img src="../assets/images/cars/hyundai-verna.jpg" alt="Hyundai Verna">
+                                <h4>Hyundai Verna</h4>
+                            </div>
+                        </div>
+                        <button class="btn compare-now-btn">Compare Now</button>
+                    </div>
+                    
+                    <div class="comparison-card">
+                        <div class="comparison-cars">
+                            <div class="comparison-car">
+                                <img src="../assets/images/cars/tata-nexon.jpg" alt="Tata Nexon">
+                                <h4>Tata Nexon</h4>
+                            </div>
+                            <span class="vs">VS</span>
+                            <div class="comparison-car">
+                                <img src="../assets/images/cars/maruti-brezza.jpg" alt="Maruti Brezza">
+                                <h4>Maruti Brezza</h4>
+                            </div>
+                        </div>
+                        <button class="btn compare-now-btn">Compare Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Car Selection Modal -->
+    <div class="modal" id="car-selection-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2>Select a Car</h2>
+            </div>
+            <div class="modal-body">
+                <div class="search-filter">
+                    <input type="text" id="car-search" placeholder="Search by brand or model">
+                    <select id="brand-filter">
+                        <option value="">All Brands</option>
+                        <option value="maruti">Maruti Suzuki</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="tata">Tata Motors</option>
+                        <option value="honda">Honda</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="mahindra">Mahindra</option>
+                    </select>
+                </div>
+                
+                <div class="car-selection-grid" id="car-selection-grid">
+                    <!-- Cars will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                    <p>Your ultimate car information platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="search.html">Cars</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@carzy.com</p>
+                    <p>Phone: +91 1234567890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Carzy. All rights reserved.</p>
+                <p>Developed by Akshat Jain, Krishanu Barman, Aditya Nath</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/compare.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cars - Carzy</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="search.html" class="active">Cars</a></li>
+                    <li><a href="compare.html">Compare</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Find Your Perfect Car</h1>
+                <p>Browse through our extensive collection of cars with detailed specifications</p>
+            </div>
+            
+            <div class="search-container">
+                <aside class="search-sidebar">
+                    <div class="search-filters">
+                        <h3>Filters</h3>
+                        
+                        <div class="filter-group">
+                            <h4>Brand</h4>
+                            <select id="brand-filter" class="filter-dropdown">
+                                <option value="all">All Brands</option>
+                                <option value="maruti">Maruti Suzuki</option>
+                                <option value="hyundai">Hyundai</option>
+                                <option value="tata">Tata Motors</option>
+                                <option value="honda">Honda</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="mahindra">Mahindra</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Body Type</h4>
+                            <select id="body-type-filter" class="filter-dropdown">
+                                <option value="all">All Body Types</option>
+                                <option value="hatchback">Hatchback</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="muv">MUV</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Fuel Type</h4>
+                            <select id="fuel-type-filter" class="filter-dropdown">
+                                <option value="all">All Fuel Types</option>
+                                <option value="petrol">Petrol</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="cng">CNG</option>
+                                <option value="electric">Electric</option>
+                                <option value="hybrid">Hybrid</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <input type="number" class="price-input" id="price-min" placeholder="Min (₹ Lakh)">
+                            <span>to</span>
+                            <input type="number" class="price-input" id="price-max" placeholder="Max (₹ Lakh)">
+                        </div>
+                        
+                        <button class="btn apply-filters-btn">Apply Filters</button>
+                        <button class="btn reset-filters-btn">Reset Filters</button>
+                    </div>
+                </aside>
+                
+                <div class="search-results">
+                    <div class="search-results-header">
+                        <div class="results-count">Showing <span id="results-count">0</span> cars</div>
+                    
+                        <!-- 🔹 Add this search input -->
+                        <div class="search-bar">
+                            <input type="text" id="car-search" placeholder="Search by brand, model, or type">
+                            <button class="search-btn" id="search-btn">Search</button>
+                        </div>
+                    
+                        <div class="sort-options">
+                            <span class="sort-label">Sort by:</span>
+                            <select class="sort-select" id="sort-select">
+                                <option value="popularity">Popularity</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="mileage">Mileage</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                                     
+                    
+                    <div class="cars-container" id="search-results">
+                        <!-- Car cards will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/search.js"></script>
+    <script>
+        document.getElementById('search-btn').addEventListener('click', function () {
+            const searchQuery = document.getElementById('car-search').value.trim();
+            if (searchQuery) {
+                window.location.href = `search.html?query=${encodeURIComponent(searchQuery)}`;
+            }
+        });
+    
+        document.getElementById('car-search').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('search-btn').click();
+            }
+        });
+    
+        // Ensure the search input retains its value when navigating back
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryParam = urlParams.get('query');
+        if (queryParam) {
+            document.getElementById('car-search').value = queryParam;
+        }
+    </script>
+    
+</body>
+</html>

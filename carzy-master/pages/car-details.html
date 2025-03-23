@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Carzy</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="search.html" class="active">Cars</a></li>
+                    <li><a href="compare.html">Compare</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="car-details">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> &gt; 
+                <a href="search.html">Cars</a> &gt; 
+                <span id="car-breadcrumb">Car Details</span>
+            </div>
+            
+            <div class="car-details-content">
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img id="main-car-image" src="../assets/images/cars/default.jpg" alt="Car Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <!-- Thumbnails will be added dynamically -->
+                    </div>
+                </div>
+                
+                <div class="car-info">
+                    <h1 id="car-name">Car Name</h1>
+                    <div class="price-rating">
+                        <div class="price">
+                            <span id="car-price">₹0.00 - ₹0.00 Lakh</span>
+                            <span class="price-type">Ex-showroom Price</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span id="rating-count">4.5 (120 Reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn compare-btn"><i class="fas fa-balance-scale"></i> Add to Compare</button>
+                        <button class="btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                    </div>
+                    
+                    <div class="key-specs">
+                        <h3>Key Specifications</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span class="spec-name">Fuel Type</span>
+                                <span id="fuel-type" class="spec-value">Petrol</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span class="spec-name">Engine</span>
+                                <span id="engine" class="spec-value">1197 cc</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-cogs"></i>
+                                <span class="spec-name">Transmission</span>
+                                <span id="transmission" class="spec-value">Manual</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-chair"></i>
+                                <span class="spec-name">Seating</span>
+                                <span id="seating" class="spec-value">5 Seater</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-road"></i>
+                                <span class="spec-name">Mileage</span>
+                                <span id="mileage" class="spec-value">21.4 kmpl</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-car"></i>
+                                <span class="spec-name">Body Type</span>
+                                <span id="body-type" class="spec-value">Hatchback</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-details-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                    <button class="tab-btn" data-tab="specifications">Specifications</button>
+                    <button class="tab-btn" data-tab="features">Features</button>
+                    <button class="tab-btn" data-tab="variants">Variants</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="overview">
+                        <p id="car-description">Car description will be displayed here.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="specifications">
+                        <!-- Specifications content will be added dynamically -->
+                    </div>
+                    
+                    <div class="tab-pane" id="features">
+                        <!-- Features content will be added dynamically -->
+                    </div>
+                    
+                    <div class="tab-pane" id="variants">
+                        <!-- Variants content will be added dynamically -->
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <!-- Reviews content will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="similar-cars">
+                <h2>Similar Cars</h2>
+                <div class="cars-container">
+                    <!-- Similar cars will be added dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Carzy Logo">
+                    <p>Your ultimate car information platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="search.html">Cars</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@carzy.com</p>
+                    <p>Phone: +91 1234567890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Carzy. All rights reserved.</p>
+                <p>Developed by Akshat Jain, Krishanu Barman, Aditya Nath</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>
